@@ -1,0 +1,49 @@
+Data Structure
+
+    :: Introduction
+        # Data Structure is a specialized format for organizing, processing, retreiving, and storing data.
+        # It is a storage that is used to arrange the data.
+        # It is a way of arranging data on computer.So that it can be accessed and opdated efficiently.
+        # There are various type of DS
+        # Depending on recquirement, the DS is choised
+
+    ::Types of Data Structure -                              
+                                    Data Structure
+
+                    Primitive DS                            Non-Primitive DS
+            
+    Integer     Real    Character   Boolean         Linear DS           Non-Linear DS
+                /Number                              - Array                - Tree
+                                                     - Linked List          - Graph
+                                                     - Stack
+                                                     - Queue
+    *Basically 2 types -> Linear and Non-Linear
+
+        Primitive: 
+            when we work with single data
+        Non-Primitive: 
+            when we work with multiple data
+
+        Linear: 
+            sequence or order data
+
+        Non-Linear:
+            messy data
+
+    ::Linear Data Structure
+
+        Array => [ 2 3 4 ]
+
+        Linked List => [ Head-> 2|next -> 3|next -> 4|next ->NULL ]
+                        BIKKIPTO OBOSTAY VALUE THAKBEY
+                            *next means - memory location
+
+        Stack => [ 2 3 4    ]   (LIFO-> last in, First out)
+                    example - which thing we put last 
+
+        Queue => [ 2 3 4    ]   (FIFO-> First in, First out)
+                    example - things we put first will pick first
+    
+    ::Non-Linear Data Structure
+
+        Graph & Tree
