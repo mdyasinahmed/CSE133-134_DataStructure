@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <string.h>
-
 #define s 1000
 
-int main() {
+int main()
+{
     char str[s];
     char word[s];
     int changingPosition;
-    int i, sentenceLength, wordLength;
+    int i, sentenceLength, lengthOfWord;
 
     printf("Sentence: ");
     gets(str);
 
-    printf("Inserting Word: ");
+    printf("Word to insert: ");
     gets(word);
 
     printf("Changing Position: ");
@@ -20,17 +20,19 @@ int main() {
     
 
     sentenceLength = strlen(str);
-    wordLength = strlen(word);
+    lengthOfWord = strlen(word);
 
-    for (i = sentenceLength; i >= changingPosition; i--) {
-        str[wordLength] = str[i];
+    for (i=sentenceLength; i>=changingPosition; i--)
+    {
+        str[lengthOfWord] = str[i];
     }
 
-    for (i = 0; i < wordLength; i++) {
+    for (i=0; i<lengthOfWord; i++)
+    {
         str[changingPosition + i] = word[i];
     }
 
-    printf("Result: %s\n", str);
+    printf("%s\n", str);
 
     return 0;
 }

@@ -1,30 +1,27 @@
 #include <stdio.h>
 #include <string.h>
-
 #define s 1000
 
-char str[s];
-
-int main() {
-    int pos, len, i;
-    printf("Enter a string (max %d characters): ", s - 1);
+int main() 
+{
+    char str[s];
+    int position, len, i;
     gets(str);
-    printf("Enter the starting position of the substring: ");
-    scanf("%d", &pos);
-    printf("Enter the length of the substring: ");
+    scanf("%d", &position);
     scanf("%d", &len);
 
     int strLen = strlen(str);
 
-    if (pos + len <= strLen) 
+    if ((position+len) <= strLen) 
     {
-        for (i = pos; i <= strLen - len; i++) 
+        for (i=position; i<=(strLen-len); i++) 
         {
-            str[i] = str[i + len];
+            str[i] = str[i+len];
         }
-        str[i] = '\0';
+        str[i] = 0;
     }
 
-    printf("String after deletion: %s\n", str);
+    printf("%s", str);
+    
     return 0;
 }

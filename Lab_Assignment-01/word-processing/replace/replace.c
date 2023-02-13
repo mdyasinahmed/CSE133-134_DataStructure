@@ -1,42 +1,31 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
+#define s 1000
 
 int main()
 {
-char original_sentence[100]; //original sentence
-char word_to_replace[100]; //word to replace
-char new_word[100]; //new word to replace with
-char result[100]; //resultant sentence after replacement
+    char sentenceMain[s];
+    char wordToReplace[s];
+    char replacingWord[s];
+    char finalOutput[s];
 
-//input original sentence
-printf("Enter the original sentence: ");
-scanf("%[^\n]", original_sentence);
+    gets(sentenceMain);
+    gets(wordToReplace);
+    gets(replacingWord);
 
-//input word to replace
-printf("Enter the word to replace: ");
-scanf("%s", word_to_replace);
+    char *store;
+    char *position;
 
-//input new word to replace with
-printf("Enter the new word to replace with: ");
-scanf("%s", new_word);
+    strcpy(finalOutput, sentenceMain);
 
-char *temp;
-char *position;
+    position = strstr(finalOutput, wordToReplace);
 
-//copy the original sentence into the result string
-strcpy(result, original_sentence);
+    store = finalOutput + (position - finalOutput);
+    strcpy(store, replacingWord);
+    strcat(store, position + strlen(wordToReplace));
 
-//find the position of the word to replace
-position = strstr(result, word_to_replace);
 
-//replace the word with new word
-temp = result + (position - result);
-strcpy(temp, new_word);
-strcat(temp, position + strlen(word_to_replace));
+    printf("%s", finalOutput);
 
-//print the resultant sentence
-printf("The resultant sentence after replacement is: %s", result);
-
-return 0;
+    return 0;
 }

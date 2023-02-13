@@ -7,7 +7,7 @@ int main()
     scanf("%d", &n);
     
     int a[s];
-    for(i=0; i<n; i++)
+    for(i=1; i<=n; i++)
     {
         scanf("%d", &a[i]);
     }
@@ -24,7 +24,7 @@ int main()
         a[j+1] = pickedValue;
     }
 
-    for(i=0; i<n; i++)
+    for(i=1; i<=n; i++)
     {
         printf("%d ", a[i]);
     }

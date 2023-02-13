@@ -32,11 +32,11 @@ int main()
 
     if(pattern[j] != 0)
     {
-        printf("0\n");
+        printf("0");
     }
     else
     {
-        printf("%d\n", index + 1);
+        printf("%d", index + 1);
     }
 
     return 0;
