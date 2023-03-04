@@ -5,12 +5,11 @@ int main()
     int size, step, store, i;
     scanf("%d", &size);
     int a[size];
-    printf("Enter all values: ");
     for (step = 0; step < size; step++)
     {
        scanf("%d", &a[step]);
     }
-    
+
     for(step = 0; step < size; step++)
     {
         for(i=0; i < size-step-1; i++)

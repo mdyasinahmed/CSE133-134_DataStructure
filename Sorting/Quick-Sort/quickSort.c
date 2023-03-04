@@ -1,13 +1,13 @@
 #include <stdio.h>
 #define s 100
-
+/*
 void swap(int *x, int *y)
 {
     int temp = *x;
     *x = *y;
     *y = temp;
 }
-
+*/
 int main()
 {
     int a[s], i, j, n, pivot, target;
@@ -26,14 +26,20 @@ int main()
         {
             target = a[i];
         }
-        for(j=i+1;j<n-1;j++)
+        break;
+        /*
+        for(j=i+1;j<n-2;j++)
         {
             if(a[j] < pivot)
             {
-                swap(target,a[j]);
+                target = a[j];
+                a[j] = a[i];
+                a[i] = target;
             }
         }
+        */
     }
+            printf("%d", target);
     for(i=0;i<n;i++)
     {
         printf("%d ", a[i]);
