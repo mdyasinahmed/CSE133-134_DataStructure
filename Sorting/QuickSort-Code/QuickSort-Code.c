@@ -45,18 +45,24 @@ int main()
     return 0;
 }
 */
+
 void swapKor(int *x, int *y)
 {
     int temp = *x;
     *x = *y;
     *y = temp;
 }
-void quickSortKorr(int arr[], int start, int end) {
-    if (start < end) {
+
+void QuickSortKorr(int arr[], int start, int end)
+{
+    if (start < end)
+    {
         int pivot = arr[end];
         int target = start - 1;
-        for (int i = start; i < end; i++) {
-            if (arr[i] < pivot) {
+        for (int i = start; i < end; i++)
+        {
+            if (arr[i] < pivot)
+            {
                 target++;
                 /*
                 int temp = arr[i];
@@ -68,37 +74,35 @@ void quickSortKorr(int arr[], int start, int end) {
         }
         target++;
         swapKor(&arr[end], &arr[target]);
-        quickSortKorr(arr, start, target - 1);
-        quickSortKorr(arr, target + 1, end);
+        QuickSortKorr(arr, start, target - 1);
+        QuickSortKorr(arr, target + 1, end);
     }
 }
-void ArrayScanKor(int a[], int n)
+
+void AkhonTuiArrayPrintKor(int a[], int thamEikhane)
 {
-    int i;
-    for(i=0;i<n;i++)
+    int shuru;
+    for (shuru = 0; shuru < thamEikhane; shuru++)
     {
-        scanf("%d", &a[i]);
-    }
-}
-void AkhonTuiArrayPrintKor(int a[], int size)
-{
-    int step;
-    for (step = 0; step < size; step++)
-    {
-       printf("%d ", a[step]);
+       printf("%d ", a[shuru]);
     }
     printf("\n");
 }
 
 
-int main() {
-    int n;
-    int arr[n];
-    scanf("%d", &n);
+int main()
+{
+    int s, arr[s];
+    scanf("%d", &s);
 
-    ArrayScanKor(arr,n);
-    quickSortKorr(arr, 0, n - 1);
-    AkhonTuiArrayPrintKor(arr,n);
+    for(int i=0; i<s; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    //scan korsott
+    QuickSortKorr(arr, 0, s - 1);
+    //bhaloKotha
+    AkhonTuiArrayPrintKor(arr,s);
 
     return 0;
 }
