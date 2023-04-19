@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
-
 #define s 1000
 
-int main() {
+int main()
+{
     char str[s];
     char word[s];
     int changingPosition;
