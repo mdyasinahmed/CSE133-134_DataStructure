@@ -99,9 +99,9 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-    //scan korsott
+    
     QuickSortKorr(arr, 0, s - 1);
-    //bhaloKotha
+
     AkhonTuiArrayPrintKor(arr,s);
 
     return 0;

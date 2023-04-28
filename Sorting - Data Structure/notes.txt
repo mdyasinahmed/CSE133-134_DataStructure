@@ -1,0 +1,13 @@
+:: Quick Sort ::
+    // Set a Pivot
+    // Comparing Array
+    // Dividing Array
+    // Function to Swap
+
+
+:: Swap-Code ::
+    /*
+    int temp = arr[i];
+    arr[i] = arr[target];
+    arr[target] = temp;
+    */
