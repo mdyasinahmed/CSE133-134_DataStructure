@@ -1,0 +1,33 @@
+
+                         Data Structure
+                            Chapter 1
+
+# Algorithm: An algorithm os a well defined list of steps of solving a particular problem.
+        Example:
+            Selection sort (array, size)
+                repeat (size-1) times
+                    set the first unsorted element as the minimum
+                        for each of the element
+                            if element < currentMinimum
+                                set the element as new minimum
+                        swap the minimum with the first unsorted element
+            End Selection sort
+
+* The time and space it uses are two major measures of the efficiency of an algorithm.
+
+# Complexity: The Complexity of an algorithm is the function f(n) which measures the time and/or space used by an algorithm in terms of the input size n.
+            - How much time its takes
+            - amount of storage its required
+
+# Time-Space Tradeoff: The Time-Space Tradeoff is a way of solving a problem or calculation in less time by using more Storage space, or solving a problem in very little space by spending a long time.
+
+# Data Structure Operations:
+        * Traversing
+        * Searching
+        * Inserting
+        * Deleting
+  //There are two operations which are used in special situation
+        * Sorting
+        * Merging
+
+        

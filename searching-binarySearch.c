@@ -24,7 +24,6 @@ void bubbleSort(int a[], int size)
     }
 }
 
-
 void binarySearch(int array[], int size, int searchingValue)
 {
     // Start | End | Mid  --> Compare <--
@@ -74,14 +73,14 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    
+
     int x;
     printf("Searching Value: ");
     scanf("%d", &x);
-    // Sorting Array
     printf("Sorted Array: ");
     bubbleSort(a,s);
     printArray(a,s);
+    printf("Searching Result: ");
     binarySearch(a,s,x);
 
     return 0;
