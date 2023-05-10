@@ -94,26 +94,55 @@ void printList(struct node* head){
 }
 
 // main
+// main
 int main()
 {
     struct node* head = NULL;
-    head = insertAtEnd(head, 5);
-    head = insertAtEnd(head, 8);
-    head = insertAtEnd(head, 11);
-    head = insertAtEnd(head, 15);
-    head = insertAtEnd(head, 18);
-    printf("List Main: ");
-    printList(head);
+    int option, value;
 
-    head = insertAtBeginning(head, 2);
-    printf("After Insert at BEG: ");
-    printList(head);
+    do {
+        printf("1. Insert at the beginning\n");
+        printf("2. Insert at the end\n");
+        printf("3. Delete a node\n");
+        printf("4. Print the list\n");
+        printf("5. Exit\n");
+        printf("Enter your option: ");
+        scanf("%d", &option);
 
-    head = deleteNode(head, 11);
-    printf("After Deleting 11: ");
-    printList(head);
+        switch(option) {
+            case 1:
+                printf("Enter the value to insert at the beginning: ");
+                scanf("%d", &value);
+                head = insertAtBeginning(head, value);
+                break;
 
-    freeList(head);
+            case 2:
+                printf("Enter the value to insert at the end: ");
+                scanf("%d", &value);
+                head = insertAtEnd(head, value);
+                break;
+
+            case 3:
+                printf("Enter the value to delete: ");
+                scanf("%d", &value);
+                head = deleteNode(head, value);
+                break;
+
+            case 4:
+                printf("List: ");
+                printList(head);
+                break;
+
+            case 5:
+                freeList(head);
+                exit(0);
+
+            default:
+                printf("Please try again.\n");
+                break;
+        }
+    }while(1);
 
     return 0;
+
 }
