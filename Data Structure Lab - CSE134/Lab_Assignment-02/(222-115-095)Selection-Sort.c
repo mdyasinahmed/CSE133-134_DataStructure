@@ -4,6 +4,8 @@
 int main()
 {
     int n, i, j, position, min;
+    // scanning Array size and Array
+    printf("Enter Array Size & Array: \n");
     scanf("%d", &n);
     int a[s];
 
@@ -33,12 +35,20 @@ int main()
         }
     }
 
-    for(i=0;i<n;i++)
-    {
-        printf("%d ", a[i]);
-    }
+    //Printing Array
+    printf("Array after Sorting: \n");
+    printArray(a, n);
 
     return 0;
 }
 
+// Function to Print an Array
+void printArray(int a[], int n)
+{
+    for(int i=0; i<n; i++)
+    {
+       printf("%d ", a[i]);
+    }
+    printf("\n");
+}
 

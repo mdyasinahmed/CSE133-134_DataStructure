@@ -39,14 +39,18 @@ void printArray(int array[], int arraySize)
 int main()
 {
     int s, arr[s];
+    //scanning array size and array
+    printf("Enter Array Size & Array: \n");
     scanf("%d", &s);
-
     for(int i=0; i<s; i++)
     {
         scanf("%d", &arr[i]);
     }
-    
+
+    //calling function for bubble Sort operation
     bubbleSort(arr,s);
+
+    printf("Array after Sorting: \n");
     printArray(arr,s);
     
     return 0;
