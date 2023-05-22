@@ -7,3 +7,11 @@ void printArray(int array[], int size){
         printf("%d ", array[i]);
     }
 }
+
+// Function to Swap 2 value Address
+void swap(int *x, int *y)
+{
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
