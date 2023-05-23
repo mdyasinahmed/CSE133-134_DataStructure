@@ -9,6 +9,7 @@ void swap(int *x, int *y)
     *y = temp;
 }
 
+// Function for Bubble Sort Operations
 void bubbleSort(int a[], int n){
     int i, j;
 
@@ -20,6 +21,7 @@ void bubbleSort(int a[], int n){
         }
     }
 }
+
 //Function to Print an Array
 void printArray(int array[], int size){
     int i;
