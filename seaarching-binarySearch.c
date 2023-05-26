@@ -24,7 +24,7 @@ void bubbleSort(int a[], int n){
 // Function for binary search operation
 void binarySearch(int a[], int n, int x){
     int i;
-    bubbleSort(a[],n);
+    bubbleSort(a,n);
     
     for(i=0; i<n; i++){
         int beg = i, end = n-1, mid = (beg+mid)/2;
@@ -41,6 +41,7 @@ void binarySearch(int a[], int n, int x){
 
             if(a[mid] == x){
                 printf("Value Matched\n");
+                break;
             }
         }
     }
@@ -57,7 +58,5 @@ int main()
     int x;
     scanf("%d", &x);
 
-    binarySearch(a, x);
-
-
+    binarySearch(a,n,x);
 }
