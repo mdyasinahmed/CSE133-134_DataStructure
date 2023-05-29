@@ -7,11 +7,22 @@ int push(int x){
     if(top < Capacity-1){
         top = top+1;
         stack[top] = x;
-        printf("Added Item: %d\n", x);
+        printf("Push(%d)\n", x);
     }
     else{
         printf("No Spaces!\n");
     }
+}
+
+int pop(){
+    if(top >= 0){
+        printf("Pop()\n");
+        int val = stack[top];
+        top = top -1;
+        return val;
+    }
+    printf("Empty Stack!\n");
+    return -1;
 }
 
 int peak(){
@@ -22,11 +33,17 @@ int peak(){
     return -1;
 }
 
-
 int main()
 {
     push(5);
-
-    printf("Top Value: %d\n", peak());
+    push(10);
+    push(15);
+    pop(15);
+    push(20);
+    push(25);
+    push(30);
+    push(35);
+    
+    printf("\nTop Value: %d", peak());
     return 0;
 }
