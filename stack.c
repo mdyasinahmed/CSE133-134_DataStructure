@@ -14,6 +14,13 @@ int push(int x){
     }
 }
 
+int peak(){
+    if(top >= 0){
+        return stack[top];
+    }
+    printf("Empty Stack!\n");
+    return -1;
+}
 
 
 int main()
