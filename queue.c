@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdbool.h>
-#define Capacity 5
+#define CAPACITY 5
 
-int queue[Capacity];
-int front = 0, rear = 0, totalItem = 0;
+int ourQueue[CAPACITY];
+int front = 0, rear = -1, totalItem = 0;
 
 bool isFull(){
-    if(totalItem == Capacity){
+    if(totalItem == CAPACITY){
         return true;
     }
     return false;
@@ -19,33 +19,51 @@ bool isEmpty(){
     return false;
 }
 
-void enqeue(int item){
-    if(isFull()){
-        printf("Queue is Full.\n");
+void enqueue(int item){
+    if(isFull())
+    {
+        printf("Sorry, the Queue is full.\n");
         return;
     }
-    rear = (rear+1)%Capacity;
-    queue[rear] = item;
+    rear=rear+1 % CAPACITY;
+    ourQueue[rear]=item;
     totalItem++;
 }
 
 int dequeue(){
-    if(isEmpty){
-        printf("Noting to Remove\n");
+    if(isEmpty()){
+        printf("Sorry, the queue is empty.\n");
+        return-1;
     }
-    int frontItem = queue[front];
-    queue[front] = -1;
-    front = (front+1) % Capacity;
+    int frontItem = ourQueue[front];
+    ourQueue[front] = -1;
+    front = (front+1) % CAPACITY;
     totalItem++;
     return frontItem;
 }
 
+int printQueue(){
+    int i;
+    printf("Queue: ");
+    for(i=0;i<CAPACITY;i++){
+        printf("%d ", ourQueue[i]);
+    }
+    printf("\n");
+}
+
 int main()
 {
-    enqeue(10);
-    enqeue(15);
-    enqeue(20);
-    dequeue();
-
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+    enqueue(40);
+    printQueue();
+    enqueue(50);
+    printQueue();
+    enqueue(60);
+    printf("Deque:%d\n",dequeue());
+    enqueue(60);
+    printQueue();
+    
     return 0;
 }
