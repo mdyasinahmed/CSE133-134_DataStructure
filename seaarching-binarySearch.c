@@ -23,27 +23,32 @@ void bubbleSort(int a[], int n){
 }
 // Function for binary search operation
 void binarySearch(int a[], int n, int x){
-    int i;
+    int i, count=0;
     bubbleSort(a,n);
     
     for(i=0; i<n; i++){
-        int beg = i, end = n-1, mid = (beg+mid)/2;
+        int beg = i, end = n-1, mid = (beg+end)/2;
         while(beg<=end)
         {
             if(a[mid] > x){
                 end = mid - 1;
-                mid = mid = (beg+mid)/2;
+                mid = (beg+end)/2;
             }
             else{
                 beg = mid + 1;
-                mid = mid = (beg+mid)/2;
+                mid = (beg+end)/2;
             }
 
             if(a[mid] == x){
-                printf("Value Matched\n");
-                break;
+                count++;
             }
         }
+    }
+    if(count>0){
+        printf("Value Matched\n");
+    }
+    else{
+        printf("Value Not Found\n");
     }
 }
 int main()
