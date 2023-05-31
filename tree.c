@@ -46,16 +46,16 @@ void preorder(struct node* root){
     if(root == NULL) return;
 
     printf("%d -> ", root -> item);
-    inorder(root -> left);
-    inorder(root -> right);
+    preorder(root -> left);
+    preorder(root -> right);
 }
 
 // traverse-postorder
 void postorder(struct node* root){
     if(root == NULL) return;
 
-    inorder(root -> left);
-    inorder(root -> right);
+    postorder(root -> left);
+    postorder(root -> right);
     printf("%d -> ", root -> item);
 }
 
