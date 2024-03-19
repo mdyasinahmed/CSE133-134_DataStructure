@@ -57,6 +57,8 @@ int main()
     printQueue();
     enqueue(10);
     printQueue();
+    dequeue();
+    printQueue();
 
     return 0;
 }
